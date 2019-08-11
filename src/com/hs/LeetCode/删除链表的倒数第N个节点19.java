@@ -14,14 +14,14 @@ package com.hs.LeetCode;
  */
 public class 删除链表的倒数第N个节点19 {
 	public ListNode removeNthFromEnd(ListNode head, int n) {
-		if(head == null){
+		if (head == null) {
 			return null;
 		}
 		ListNode dummy = new ListNode(0);
 		dummy.next = head;
-		ListNode p1,p2;
+		ListNode p1, p2;
 		p1 = p2 = dummy;
-		for(int i = 0 ;i < n ;i++){
+		for (int i = 0; i < n; i++) {
 			p2 = p2.next;
 		}
 		while (p2 != null) {
