@@ -1,6 +1,5 @@
 package com.hs.LeetCode;
 
-import com.hs.LeetCode.链表.ListNode;
 
 /**
  * 给定一个单链表 L：L0→L1→…→Ln-1→Ln ，

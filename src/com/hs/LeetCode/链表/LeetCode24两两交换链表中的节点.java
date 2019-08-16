@@ -33,9 +33,11 @@ public class LeetCode24两两交换链表中的节点 {
 			node1 = p.next;
 			node2 = node1.next;
 			ListNode next = node2.next;
+
 			p.next = node2;
 			node2.next = node1;
 			node1.next = next;
+
 			p = node1;
 		}
 		return dummy.next;

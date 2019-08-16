@@ -1,6 +1,5 @@
 package com.hs.LeetCode;
 
-import com.hs.LeetCode.链表.ListNode;
 
 /**
  * TODO
