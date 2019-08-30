@@ -48,4 +48,9 @@ public class 组合综合240 {
 
 		}
 	}
+
+	public static void main(String[] args) {
+		System.out.println(new 组合综合240().combinationSum2(new int[]{10, 1, 2, 7, 6, 1, 5}, 8));
+
+	}
 }

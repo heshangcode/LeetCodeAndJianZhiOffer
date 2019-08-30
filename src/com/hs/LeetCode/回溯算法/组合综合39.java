@@ -46,6 +46,7 @@ public class 组合综合39 {
 	}
 
 	public void dfs(int[] candidates, int target, int s, ArrayList<Integer> path) {
+
 		if (target < 0) {
 			return;
 		}
@@ -65,6 +66,6 @@ public class 组合综合39 {
 	}
 
 	public static void main(String[] args) {
-		new 组合综合39().combinationSum(new int[]{2, 3, 6, 7, 8}, 7);
+		System.out.println(new 组合综合39().combinationSum(new int[]{1, 3, 2, 6, 7, 8}, 6));
 	}
 }
