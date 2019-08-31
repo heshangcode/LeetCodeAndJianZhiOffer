@@ -30,7 +30,7 @@ public class LeetCode90子集II {
 			return;
 		}
 		for (int i = index; i < nums.length; i++) {
-			if (i > 0 && nums[i] == nums[i - 1]) {
+			if (i > index && nums[i] == nums[i - 1]) {
 				continue;
 			}
 			path.add(nums[i]);
