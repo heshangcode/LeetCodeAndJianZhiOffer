@@ -1,4 +1,4 @@
-package com.hs.LeetCode.回溯算法;
+package com.hs.LeetCode.回溯算法.二维回溯;
 
 /**
  * https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/
@@ -23,7 +23,7 @@ package com.hs.LeetCode.回溯算法;
  * @Date 2019/8/31 21:14
  */
 public class LeetCode79单词搜索 {
-	int xLen, yLen;
+	int m, n;
 	boolean[][] visited;
 
 	//移动的方向
@@ -33,14 +33,14 @@ public class LeetCode79单词搜索 {
 		if (word.length() == 0) {
 			return true;
 		}
-		yLen = board.length;
-		if (yLen < 0) {
+		m = board.length;
+		if (n < 0) {
 			return false;
 		}
-		xLen = board[0].length;
-		visited = new boolean[yLen][xLen];
-		for (int i = 0; i < yLen; i++) {
-			for (int j = 0; j < xLen; j++) {
+		n = board[0].length;
+		visited = new boolean[m][n];
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
 				if (dfs(board, word, 0, i, j)) {
 					return true;
 				}
@@ -88,8 +88,8 @@ public class LeetCode79单词搜索 {
 	}
 
 	// 判断这个坐标是否合法，有没有越界
-	private boolean isArea(int newx, int newy) {
-		return newx >= 0 && newx < xLen && newy >= 0 && newy < yLen;
+	private boolean isArea(int x, int y) {
+		return x >= 0 && x < m && y >= 0 && y < n;
 	}
 
 	public static void main(String args[]) {
@@ -108,9 +108,10 @@ public class LeetCode79单词搜索 {
 		// ---
 
 		char[][] b2 = {{'A'}};
-		if ((new LeetCode79单词搜索()).exist(b2, "AB"))
+		if ((new LeetCode79单词搜索()).exist(b2, "AB")) {
 			System.out.println("found AB");
-		else
+		} else {
 			System.out.println("can not found AB");
+		}
 	}
 }
