@@ -6,7 +6,7 @@ import java.util.Arrays;
  * https://leetcode-cn.com/problems/climbing-stairs/submissions/
  * 思路1：斐波拉契递归，超时
  * 思路2：自顶向下的记忆搜索，
- * 思路3：思路2改的递推
+ * 思路3：思路2改的递推，动态规划
  * @Author heshang.ink
  * @Date 2019/8/23 10:51
  */
