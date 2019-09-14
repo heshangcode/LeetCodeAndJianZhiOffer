@@ -24,6 +24,7 @@ public class LeetCode70爬楼梯 {
 		return climbStairs1(n - 1) + climbStairs1(n - 2);
 	}
 
+	// 存重叠子问题的值
 	int[] memo;
 	public int climbStairs2(int n) {
 		memo = new int[n + 1];
