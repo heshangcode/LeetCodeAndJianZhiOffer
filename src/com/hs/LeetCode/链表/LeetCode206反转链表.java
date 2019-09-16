@@ -38,6 +38,7 @@ public class LeetCode206反转链表 {
 		}
 		return newHead;
 	}
+
 	public ListNode reverseList2(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;

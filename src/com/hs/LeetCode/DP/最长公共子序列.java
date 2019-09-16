@@ -15,7 +15,6 @@ public class 最长公共子序列 {
 	 * @param B
 	 * @return
 	 */
-
 	public int lcs(String A, String B) {
 		if (A.length() == 0 || B.length() == 0) {
 			return 0;
@@ -31,21 +30,36 @@ public class 最长公共子序列 {
 		}
 	}
 
-	public int findLCS(String A, int n, String B, int m) {
-		int[][] nums = new int[n + 1][m + 1];
-		//这里是直接把nums[0][0]默认为0
-		for (int i = 1; i < nums.length; i++) {
-			for (int j = 1; j < nums[i].length; j++) {
+	public int findLCS(String A, String B) {
+		int n = A.length();
+		int m = B.length();
+
+		// dp 是 (m + 1) * (n + 1) 的动态规划表格
+		// dp[i][j] 表示s1的前i个字符和s2前j个字符的最长公共子序列的长度
+		// dp[0][j] 表示s1取空字符串时, 和s2的前j个字符作比较
+		// dp[i][0] 表示s2取空字符串时, 和s1的前i个字符作比较
+		// 所以, dp[0][j] 和 memo[i][0] 均取0
+		// 我们不需要对memo进行单独的边界条件处理 :-)
+		int[][] dp = new int[m + 1][n + 1];
+		// 动态规划的过程
+		// 注意, 由于动态规划状态的转变, 下面的i和j可以取到m和n
+
+		for (int i = 1; i <= m; i++) {
+			for (int j = 1; j <= n; j++) {
+				// 转移方程
+				// 两个字符相同
+				// dp[i][j] = 1 + dp[i - 1][j - 1];
+				// 两个字符不相同
+				// 比较i -1和j 或者 i 和j - 1
+				// dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
 				if (A.charAt(i - 1) == B.charAt(j - 1)) {
-					//如果两串这个串相等，则左上角 + 1
-					nums[i][j] = nums[i - 1][j - 1] + 1;
+					dp[i][j] = 1 + dp[i - 1][j - 1];
 				} else {
-					//不相同，取左边和上面最大值
-					nums[i][j] = Math.max(nums[i][j - 1], nums[i - 1][j]);
+					dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
 				}
 			}
 		}
-		return nums[n][m];
+		return dp[n][m];
 
 	}
 
@@ -53,7 +67,7 @@ public class 最长公共子序列 {
 		int lcs = new 最长公共子序列().lcs("abcdda", "adcda");
 		System.out.println(lcs);
 
-		int lcs1 = new 最长公共子序列().findLCS("abcdda", 6, "adcda", 5);
+		int lcs1 = new 最长公共子序列().findLCS("abcdda", "adcda");
 		System.out.println(lcs1);
 	}
 }

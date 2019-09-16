@@ -16,7 +16,7 @@ public class LeetCode63不同路径II {
 			return 0;
 		}
 		int n = obstacleGrid[0].length;
-		dp = new int[m][n];
+		dp = new int[500][500];
 		//2.初始化
 		for (int i = 0; i < m; i++) {
 			if (obstacleGrid[i][0] == 1) {

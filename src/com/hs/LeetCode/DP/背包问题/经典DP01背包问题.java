@@ -1,4 +1,4 @@
-package com.hs.LeetCode.DP;
+package com.hs.LeetCode.DP.背包问题;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.hs.LeetCode.DP;
+package com.hs.LeetCode.DP.背包问题;
 
 /**
  * 背包问题的变种，

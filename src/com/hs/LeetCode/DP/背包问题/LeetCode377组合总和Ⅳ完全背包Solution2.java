@@ -1,4 +1,4 @@
-package com.hs.LeetCode.DP;
+package com.hs.LeetCode.DP.背包问题;
 
 import java.util.Arrays;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @Author heshang.ink
  * @Date 2019/9/14 20:26
  */
-public class LeetCode377组合总和ⅣSolution2 {
+public class LeetCode377组合总和Ⅳ完全背包Solution2 {
 	int[] memo;
 
 	public int combinationSum4(int[] nums, int target) {
