@@ -22,10 +22,12 @@ release.properties
 ## IntelliJ
 ##########################
 *.iml
-.idea/
+/.idea/
 *.ipr
 *.iws
 out/
+/target/
+*.log
 .idea_modules/
 
 ##########################
@@ -59,3 +61,4 @@ nb-configuration.xml
 ## OS X
 ##########################
 .DS_Store
+
