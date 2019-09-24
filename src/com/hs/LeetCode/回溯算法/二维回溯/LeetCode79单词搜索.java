@@ -39,6 +39,7 @@ public class LeetCode79单词搜索 {
 		}
 		n = board[0].length;
 		visited = new boolean[m][n];
+		//依次枚举每一个起点
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
 				if (dfs(board, word, 0, i, j)) {
