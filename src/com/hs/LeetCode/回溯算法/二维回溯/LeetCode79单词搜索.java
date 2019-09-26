@@ -1,7 +1,25 @@
 package com.hs.LeetCode.回溯算法.二维回溯;
 
 /**
- * https://leetcode-cn.com/problems/word-search/solution/zai-er-wei-ping-mian-shang-shi-yong-hui-su-fa-pyth/
+ * 给定一个二维网格和一个单词，找出该单词是否存在于网格中。
+ *
+ * 单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
+ *
+ * 示例:
+ *
+ * board =
+ * [
+ *   ['A','B','C','E'],
+ *   ['S','F','C','S'],
+ *   ['A','D','E','E']
+ * ]
+ *
+ * 给定 word = "ABCCED", 返回 true.
+ * 给定 word = "SEE", 返回 true.
+ * 给定 word = "ABCB", 返回 false.
+ *
+ * 来源：力扣（LeetCode）
+ * 链接：https://leetcode-cn.com/problems/word-search
  * 思路：典型二维回溯模板
  * x-1,y
  * x,y-1  x,y    x,y+1
@@ -38,6 +56,7 @@ public class LeetCode79单词搜索 {
 			return false;
 		}
 		n = board[0].length;
+//		System.out.println(m + " " + n);
 		visited = new boolean[m][n];
 		//依次枚举每一个起点
 		for (int i = 0; i < m; i++) {

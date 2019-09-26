@@ -21,23 +21,7 @@ import com.hs.LeetCode.ListNode;
  * @Author heshang.ink
  * @Date 2019/8/10 14:52
  */
-public class LeetCode206反转链表 {
-	public ListNode reverseList1(ListNode head) {
-		if (head == null) {
-			return null;
-		}
-		//指向反转成功的链表头
-		ListNode newHead = null;
-		//指向还没有反转的链表
-		ListNode curHead = head;
-		while (curHead != null) {
-			ListNode next = curHead.next;
-			curHead.next = newHead;
-			newHead = curHead;
-			curHead = next;
-		}
-		return newHead;
-	}
+public class LeetCode206反转链表Solution2 {
 
 	public ListNode reverseList2(ListNode head) {
 		if (head == null || head.next == null) {
