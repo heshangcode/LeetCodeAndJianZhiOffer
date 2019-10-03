@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer;
+package com.hs.JianZhiOffer.DP;
 
 /**
  * 思路3：一维数组优化

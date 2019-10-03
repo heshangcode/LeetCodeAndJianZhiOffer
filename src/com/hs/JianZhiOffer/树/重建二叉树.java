@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer;
+package com.hs.JianZhiOffer.树;
 
 import java.util.Arrays;
 
@@ -38,13 +38,13 @@ public class 重建二叉树 {
 	 * @param inOrder
 	 * @return
 	 */
-	public com.hs.LeetCode.树.TreeNode createTree(String preOrder, String inOrder) {
+	public TreeNode createTree(String preOrder, String inOrder) {
 		if (preOrder.isEmpty()) {
 			return null;
 		}
 		char rootValue = preOrder.charAt(0);
 		int rootIndex = inOrder.indexOf(rootValue);
-		com.hs.LeetCode.树.TreeNode root = new com.hs.LeetCode.树.TreeNode(rootValue);
+		TreeNode root = new TreeNode(rootValue);
 		root.left = createTree(preOrder.substring(1, 1 + rootIndex), inOrder.substring(0, rootIndex));
 		root.right = createTree(preOrder.substring(1 + rootIndex), inOrder.substring(1 + rootIndex));
 
