@@ -23,6 +23,7 @@ class RandomListNode {
     }
 }
 public class 复杂链表的复刻 {
+
 	public RandomListNode Clone(RandomListNode head) {
 		if (head == null) {
 			return null;

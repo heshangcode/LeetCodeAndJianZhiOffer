@@ -9,7 +9,7 @@ import java.util.List;
  * @Author heshang.ink
  * @Date 2019/8/16 15:51
  */
-public class LeetCode94二叉树的中序遍历 {
+public class LeetCode94二叉树的中序遍历Solution1 {
 	public List<Integer> inorderTraversal(TreeNode root) {
 		ArrayList<Integer> res = new ArrayList<>();
 		inorderTraversal(root, res);

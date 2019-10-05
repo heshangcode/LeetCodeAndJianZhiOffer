@@ -9,7 +9,7 @@ import java.util.List;
  * @Author heshang.ink
  * @Date 2019/8/16 15:51
  */
-public class LeetCode145二叉树的后序遍历 {
+public class LeetCode145二叉树的后序遍历Solution1 {
 	public List<Integer> postorderTraversal(TreeNode root) {
 		ArrayList<Integer> res = new ArrayList<>();
 		postorderTraversal(root, res);

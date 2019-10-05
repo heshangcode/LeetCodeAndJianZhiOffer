@@ -2,6 +2,7 @@ package com.hs.LeetCode.树;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 给定一个二叉树，返回它的 前序 遍历。
@@ -18,26 +19,30 @@ import java.util.List;
  * 输出: [1,2,3]
  * <p>
  * 链接：https://leetcode-cn.com/problems/binary-tree-preorder-traversal
- * 思路：小坑就是需要另外一个方法，记录每次的list
+ * 思路：非递归
  * @Author heshang.ink
  * @Date 2019/8/16 15:29
  */
-public class LeetCode144二叉树的前序遍历 {
+public class LeetCode144二叉树的前序遍历Solution2 {
 	public List<Integer> preorderTraversal(TreeNode root) {
-		if (root == null) {
-			return null;
-		}
 		ArrayList<Integer> res = new ArrayList<>();
-		preorderTraversal(root, res);
+		if (root == null) {
+			return res;
+		}
+		Stack<TreeNode> stack = new Stack<>();
+		stack.push(root);
+		while (!stack.isEmpty()) {
+			root = stack.pop();
+			res.add(root.val);
+			if (root.right != null) {
+				stack.push(root.right);
+			}
+			if (root.left != null) {
+				stack.push(root.left);
+			}
+		}
 		return res;
 	}
 
-	public void preorderTraversal(TreeNode node, List<Integer> list) {
-		if (node == null) {
-			return;
-		}
-		list.add(node.val);
-		preorderTraversal(node.left, list);
-		preorderTraversal(node.right, list);
-	}
+
 }
