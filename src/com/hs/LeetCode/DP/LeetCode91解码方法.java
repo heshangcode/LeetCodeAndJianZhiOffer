@@ -99,7 +99,8 @@ public class LeetCode91解码方法 {
 				dp[i] += dp[i - 1];
 			}
 			//如果后两位能组成"1x"（x为任意数字）或者"2x"（x小于7），说明最后两位组成字母合法
-			if ((s.charAt(i - 2) == '1') || (s.charAt(i - 2) == '2' && s.charAt(i - 1) <= '6')) {
+			if ((s.charAt(i - 2) == '1') || (s.charAt(i - 2) == '2'
+					&& s.charAt(i - 1) <= '6')) {
 				dp[i] += dp[i - 2];
 			}
 		}
