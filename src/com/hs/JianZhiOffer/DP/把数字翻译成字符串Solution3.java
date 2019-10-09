@@ -15,35 +15,40 @@ package com.hs.JianZhiOffer.DP;
  * 输出：5
  * <p>
  * 思路：dp解决
+ * <p>
+ * 最前面的翻译方法是保留了后面的翻译方法加上自己的 所以最后返回的是arr[0],这也就是为什么要从n-2开始遍历
+ * 举个例子:2 6 5 其中每一位都是1 但是 2 2 6 在arr[0]的时候有考虑到 22这种组合在前面的基础上加上最前面我们设置
+ * 的arr[n] = 1.
  *
-
  * @Author heshang.ink
  * @Date 2019/10/8 20:55
  */
-public class 把数字翻译成字符串Solution2 {
+public class 把数字翻译成字符串Solution3 {
 	public int StrToInt(String str) {
-		if (str.length() == 0) {
+		int n = str.length();
+		if (n == 0) {
 			return 0;
 		}
 		if (str.charAt(0) == '0') {
 			return 0;
 		}
 		//f[i] 前i位能表示几种
-		int[] dp = new int[str.length() + 1];
+		int[] dp = new int[n + 1];
 		// 初始化边界 0位是1 1位也是1
-		dp[0] = dp[1] = 1;
-		// 转移方程：f[i] = f[i - 1] + f[i - 2];   一个字符组成一个+两个字符组成一个
-		for (int i = 2; i <= str.length(); i++) {
+		dp[n] = dp[n - 1] = 1;
+		// 转移方程：f[i] = f[i + 1] + f[i + 2];   一个字符组成一个+两个字符组成一个
+		for (int i = n - 2; i >= 0; i--) {
 			//这个题跟lc不同的是，这个0是有效的
-			dp[i] += dp[i - 1];
+			dp[i] += dp[i + 1];
 			//如果后两位能组成"1x"（x为任意数字）或者"2x"（x小于7），说明最后两位组成字母合法
 			// 本题是到25 lc到26
-			if ((str.charAt(i - 2) == '1') || (str.charAt(i - 2) == '2'
-					&& str.charAt(i - 1) <= '5')) {
-				dp[i] += dp[i - 2];
+			int num = (str.charAt(i) - '0') * 10 + (str.charAt(i + 1) - '0');
+			//这种情况03 05 09就不能组成两个字符的
+			if (num >= 10 && num <= 25) {
+				dp[i] += dp[i + 2];
 			}
 		}
-		return dp[str.length()];
+		return dp[0];
 	}
 
 }

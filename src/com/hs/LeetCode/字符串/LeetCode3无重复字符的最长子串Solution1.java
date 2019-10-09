@@ -1,4 +1,4 @@
-package com.hs.LeetCode;
+package com.hs.LeetCode.字符串;
 
 /**
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
@@ -28,9 +28,9 @@ package com.hs.LeetCode;
  * @Author heshang.ink
  * @Date 2019/5/1 17:51
  */
-public class LeetCode3无重复字符的最长子串 {
+public class LeetCode3无重复字符的最长子串Solution1 {
 	public static void main(String[] args) {
-		int abcabcbb = new LeetCode3无重复字符的最长子串().lengthOfLongestSubstring1("xabcabc");
+		int abcabcbb = new LeetCode3无重复字符的最长子串Solution1().lengthOfLongestSubstring1("xabcabc");
 		System.out.println(abcabcbb);
 	}
 

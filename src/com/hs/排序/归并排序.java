@@ -26,7 +26,6 @@ public class 归并排序 {
 	public static void mergeSort(int[] arr, int low, int high) {
 		int mid = low + (high - low) / 2;
 		if (low < high) {
-
 			//继续拆分左边
 			mergeSort(arr, low, mid);
 			//继续拆分右边

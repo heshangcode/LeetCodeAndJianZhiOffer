@@ -23,15 +23,17 @@ public class 快速排序 {
 			int low = start;
 			int high = end;
 			while (low < high) {
-				//处理左边比他大的数，一直比他小，high--
+				//处理右边比他大的数，一直比他大，high--
 				while (low < high && arr[high] >= p) {
 					high--;
 				}
+				//找到一个比他小的数，放到右边去
 				arr[low] = arr[high];
-				//处理右边比他小的数，一直比他小，low++
+				//处理左边比他小的数，一直比他小，low++
 				while (low < high && arr[low] < p) {
 					low++;
 				}
+				//找到一个比他小的数，放到左边去
 				arr[high] = arr[low];
 			}
 			arr[low] = p;

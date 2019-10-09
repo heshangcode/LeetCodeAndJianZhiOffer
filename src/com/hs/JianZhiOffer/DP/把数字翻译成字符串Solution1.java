@@ -31,10 +31,6 @@ public class 把数字翻译成字符串Solution1 {
 		if (str.length() == index) {
 			return 1;
 		}
-		//特殊情况，如果这个值为0，没有字符可以匹配
-		if (str.charAt(index) == '0') {
-			return 0;
-		}
 		//每次枚举一个字符
 		int res1 = dfs(str, index + 1);
 		int res2 = 0;
@@ -42,7 +38,7 @@ public class 把数字翻译成字符串Solution1 {
 		if (index < str.length() - 1) {
 			int ten = (str.charAt(index) - '0') * 10;
 			int one = (str.charAt(index + 1) - '0');
-			if (ten + one <= 26) {
+			if (ten + one <= 25) {
 				res2 = dfs(str, index + 2);
 			}
 		}
