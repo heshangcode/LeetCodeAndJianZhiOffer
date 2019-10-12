@@ -24,7 +24,7 @@ package com.hs.LeetCode.树;
  * @Author heshang.ink
  * @Date 2019/8/17 20:18
  */
-public class LeetCode226翻转二叉树 {
+public class LeetCode226翻转二叉树Solution1 {
 	public TreeNode invertTree(TreeNode root) {
 		if (root == null) {
 			return null;

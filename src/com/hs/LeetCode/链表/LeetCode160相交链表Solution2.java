@@ -1,5 +1,6 @@
-package com.hs.LeetCode;
+package 链表;
 
+import com.hs.LeetCode.链表.ListNode;
 
 /**
  * TODO
@@ -7,7 +8,7 @@ package com.hs.LeetCode;
  * @Author heshang.ink
  * @Date 2019/6/9 9:23
  */
-public class 相交链表160 {
+public class LeetCode160相交链表Solution2 {
 	public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 		/**就相当于为了消除长度差，把两个链表分别连接起来
 		 定义两个指针, 第一轮让两个到达末尾的节点指向另一个链表的头部, 最后如果相遇则为交点(在第一轮移动中恰好抹除了长度差)

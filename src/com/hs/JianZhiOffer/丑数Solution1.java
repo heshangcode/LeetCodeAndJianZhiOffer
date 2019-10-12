@@ -1,7 +1,5 @@
 package com.hs.JianZhiOffer;
 
-import java.util.ArrayList;
-
 /**
  * 我们把只包含质因子2、3和5的数称作丑数（Ugly Number）。
  *
@@ -19,22 +17,20 @@ import java.util.ArrayList;
  * @Author heshang.ink
  * @Date 2019/10/9 11:41
  */
-public class 丑数 {
+public class 丑数Solution1 {
 	public int GetUglyNumber_Solution(int index) {
-		ArrayList<Integer> list = new ArrayList<>();
-		list.add(1);
 		if (index == 1) {
 			return 1;
 		}
-		for (int i = 1; i <= 100000000; i++) {
-			if (isUglyNumber(i)){
-				list.add(i);
+		int i = 1;
+		int res = 2;
+		while (i < index) {
+			if (isUglyNumber(res)) {
+				i++;
 			}
-			if (list.size() == index) {
-				return i;
-			}
+			res++;
 		}
-		return -1;
+		return res;
 	}
 
 	private boolean isUglyNumber(int i) {

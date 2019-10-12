@@ -1,5 +1,6 @@
-package com.hs.LeetCode;
+package 链表;
 
+import com.hs.LeetCode.链表.ListNode;
 
 /**
  * TODO
@@ -7,7 +8,7 @@ package com.hs.LeetCode;
  * @Author heshang.ink
  * @Date 2019/4/11 19:39
  */
-public class 相交链表 {
+public class LeetCode160相交链表Solution1 {
 	public static void main(String[] args) {
 
 	}

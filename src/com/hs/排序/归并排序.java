@@ -31,6 +31,7 @@ public class 归并排序 {
 			//继续拆分右边
 			mergeSort(arr, mid + 1, high);
 			merge(arr, low, mid, high);
+			System.out.println(Arrays.toString(arr));
 		}
 	}
 
@@ -43,6 +44,8 @@ public class 归并排序 {
 	 * @param right
 	 */
 	private static void merge(int[] arr, int left, int mid, int right) {
+
+
 		if (left <= right) {
 			int[] newArray = new int[right - left + 1];
 			int i = left;
