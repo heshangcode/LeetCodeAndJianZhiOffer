@@ -23,11 +23,11 @@ import com.hs.LeetCode.ListNode;
  */
 public class LeetCode206反转链表Solution2 {
 
-	public ListNode reverseList2(ListNode head) {
+	public ListNode reverseList(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;
 		}
-		ListNode newHead = reverseList2(head.next);
+		ListNode newHead = reverseList(head.next);
 		head.next.next = head;
 		head.next = null;
 		return newHead;

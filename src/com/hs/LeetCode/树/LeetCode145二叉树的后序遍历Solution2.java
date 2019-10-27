@@ -34,6 +34,11 @@ public class LeetCode145二叉树的后序遍历Solution2 {
 		return res;
 	}
 
+	/**
+	 * 这个是不利用Collection.reverse进行翻转，利用栈
+	 * @param root
+	 * @return
+	 */
 	public List<Integer> postorderTraversal2(TreeNode root) {
 		ArrayList<Integer> res = new ArrayList<>();
 		if (root == null) {

@@ -47,6 +47,7 @@ public class LeetCode20有效的括号 {
 		if (s.length() == 1) {
 			return false;
 		}
+
 		Stack<Character> stack = new Stack<>();
 		for (int i = 0; i < s.length(); i++) {
 			char c = s.charAt(i);
@@ -54,7 +55,8 @@ public class LeetCode20有效的括号 {
 				//入栈
 				stack.push(c);
 			} else {
-				//是闭括号，比较
+				// 是闭括号，比较
+				// 需要判断栈是否为空
 				if (stack.isEmpty()) {
 					return false;
 				}

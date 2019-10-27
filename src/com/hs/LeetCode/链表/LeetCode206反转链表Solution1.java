@@ -39,14 +39,5 @@ public class LeetCode206反转链表Solution1 {
 		return newHead;
 	}
 
-	public ListNode reverseList2(ListNode head) {
-		if (head == null || head.next == null) {
-			return head;
-		}
-		ListNode newHead = reverseList2(head.next);
-		head.next.next = head;
-		head.next = null;
-		return newHead;
-	}
 }
 
