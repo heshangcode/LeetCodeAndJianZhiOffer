@@ -3,7 +3,7 @@ package com.hs.LeetCode;
 import java.util.HashMap;
 
 /**
- * TODO
+ * letcode搜LRU可以查到，大概思路就是用双向链表+hash表实现，完成查找用hashmap时间复杂度为O1，插入用双向list效率也为O1.
  *
  * @Author heshang.ink
  * @Date 2019/10/15 13:15

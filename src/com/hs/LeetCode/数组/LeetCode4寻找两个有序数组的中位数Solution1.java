@@ -6,7 +6,7 @@ package com.hs.LeetCode.数组;
  * @Author heshang.ink
  * @Date 2019/9/24 10:46
  */
-public class LeetCode4寻找两个有序数组的中位数 {
+public class LeetCode4寻找两个有序数组的中位数Solution1 {
 	public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 		int l1 = nums1.length,l2 = nums2.length;
 		int[] nums = new int[l1 + l2];

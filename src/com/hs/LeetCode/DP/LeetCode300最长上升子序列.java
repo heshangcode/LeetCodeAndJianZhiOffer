@@ -34,7 +34,7 @@ public class LeetCode300最长上升子序列 {
 		}
 		int res = 1;
 		for (int i = 0; i < nums.length; i++) {
-			res = Math.max(res, nums[i]);
+			res = Math.max(res, dp[i]);
 		}
 		return res;
 	}
