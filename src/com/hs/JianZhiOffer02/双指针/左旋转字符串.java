@@ -1,7 +1,7 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.双指针;
 
 /**
- * TODO
+ * 分开 2 个字符串相加就行
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/14 08:39

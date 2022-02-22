@@ -1,4 +1,6 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.树;
+
+import com.hs.JianZhiOffer02.TreeNode;
 
 /**
  * TODO
@@ -8,7 +10,7 @@ package com.hs.JianZhiOffer02;
  * version: 1.0
  */
 public class 平衡二叉树 {
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalanced1(TreeNode root) {
         return recur(root) != -1;
     }
 
@@ -27,5 +29,19 @@ public class 平衡二叉树 {
             return -1;
         }
         return Math.abs(left - right) < 2 ? Math.max(left, right) + 1 : -1;
+    }
+
+    public boolean isBalanced(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return Math.abs(maxDepth(root.left) - maxDepth(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
+    }
+
+    public int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return Math.max(maxDepth(root.right), maxDepth(root.left)) + 1;
     }
 }

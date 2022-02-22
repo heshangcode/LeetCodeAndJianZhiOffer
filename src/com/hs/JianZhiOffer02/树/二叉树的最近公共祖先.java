@@ -1,4 +1,6 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.树;
+
+import com.hs.JianZhiOffer02.TreeNode;
 
 /**
  * TODO

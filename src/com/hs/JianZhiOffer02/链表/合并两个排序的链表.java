@@ -1,7 +1,9 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.链表;
+
+import com.hs.JianZhiOffer02.ListNode;
 
 /**
- * TODO
+ * 双指针
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/13 09:00
@@ -21,15 +23,12 @@ public class 合并两个排序的链表 {
             }
             curr = curr.next;
         }
-        while (l1 != null) {
+
+        if (l1 != null) {
             curr.next = l1;
-            l1 = l1.next;
-            curr = curr.next;
         }
-        while (l2 != null) {
+        if (l2 != null) {
             curr.next = l2;
-            l2 = l2.next;
-            curr = curr.next;
         }
         return newHead.next;
     }

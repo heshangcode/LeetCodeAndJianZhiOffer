@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.栈;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -12,24 +12,18 @@ import java.util.Deque;
  */
 public class 包含min函数的栈 {
 
+
     Deque<Integer> stack;
     Deque<Integer> minStack;
-
-    /**
-     * initialize your data structure here.
-     */
     //public MinStack() {
     //    stack = new ArrayDeque<>();
     //    minStack = new ArrayDeque<>();
+    //    minStack.push(Integer.MAX_VALUE);
     //}
 
     public void push(int x) {
         stack.push(x);
-        if (minStack.isEmpty()) {
-            minStack.push(x);
-        } else {
-            minStack.push(Math.min(x, minStack.peek()));
-        }
+        minStack.push(Math.min(x, minStack.peek()));
     }
 
     public void pop() {

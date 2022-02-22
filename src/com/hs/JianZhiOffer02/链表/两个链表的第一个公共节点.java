@@ -1,4 +1,6 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.链表;
+
+import com.hs.JianZhiOffer02.ListNode;
 
 /**
  * TODO

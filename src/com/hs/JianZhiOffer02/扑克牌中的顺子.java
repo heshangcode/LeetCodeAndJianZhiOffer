@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * TODO
+ * 先排序，再统计大小王的数量，最大值--最小值 < 5，就可以拿大小王补充
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/16 09:14
@@ -13,16 +13,15 @@ import java.util.HashSet;
 public class 扑克牌中的顺子 {
     public boolean isStraight(int[] nums) {
         Arrays.sort(nums);
-        int min = Integer.MAX_VALUE;
+        int joker = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
-                continue;
-            }
-            if (i < nums.length - 1 && nums[i + 1] == nums[i]) {
+                joker++;
+            } else if (i < nums.length - 1 && nums[i + 1] == nums[i]) {
                 return false;
             }
-            min = Math.min(nums[i], min);
+
         }
-        return nums[nums.length - 1] - min < 5;
+        return nums[nums.length - 1] - nums[joker] < 5;
     }
 }

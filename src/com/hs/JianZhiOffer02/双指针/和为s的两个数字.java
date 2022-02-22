@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.双指针;
 
 /**
  * TODO

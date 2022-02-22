@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.哈希;
 
 import java.util.HashMap;
 import java.util.HashSet;

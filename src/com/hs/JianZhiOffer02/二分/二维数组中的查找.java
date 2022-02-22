@@ -1,4 +1,4 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.二分;
 
 /**
  * TODO

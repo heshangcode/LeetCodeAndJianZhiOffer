@@ -1,7 +1,7 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.二分;
 
 /**
- * TODO
+ * 二分，根据下标来判断
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/14 08:26

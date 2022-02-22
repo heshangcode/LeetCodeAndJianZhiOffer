@@ -1,7 +1,7 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.DP;
 
 /**
- * TODO
+ * DP，用数组记录
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/13 20:37

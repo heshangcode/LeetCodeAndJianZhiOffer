@@ -1,7 +1,7 @@
 package com.hs.JianZhiOffer02.二分;
 
 /**
- * TODO
+ * 2 分，[i.m][m+1,j]
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/12 22:04

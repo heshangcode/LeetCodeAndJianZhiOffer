@@ -1,7 +1,9 @@
-package com.hs.JianZhiOffer02;
+package com.hs.JianZhiOffer02.树;
+
+import com.hs.JianZhiOffer02.TreeNode;
 
 /**
- * TODO
+ * 递归，把原来左边的变为右边，反之
  *
  * @author 微信公众号《和尚的破功之路》
  * @date 2022/2/13 09:08
@@ -12,10 +14,10 @@ public class 二叉树的镜像 {
         if (root == null) {
             return null;
         }
-        TreeNode left = mirrorTree(root.right);
-        TreeNode right = mirrorTree(root.left);
-        root.left = left;
-        root.right = right;
+        TreeNode left = mirrorTree(root.left);
+        TreeNode right = mirrorTree(root.right);
+        root.right = left;
+        root.left = right;
         return root;
     }
 }
